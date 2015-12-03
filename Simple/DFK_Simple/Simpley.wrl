@@ -1,0 +1,512 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF Frontal_View Viewpoint {
+	position	0 1.6 10
+}
+DEF Lateral_VP Viewpoint {
+	orientation	0 1 0  1.5708
+	position	8 2 0
+}
+Background {
+	groundAngle	[ 0.9, 1.5, 1.57 ]
+	groundColor	[ 0 0.8 0,
+			  0.174249 0.82 0.187362,
+			  0.467223 0.82 0.445801,
+			  0.621997 0.67 0.600279 ]
+	skyAngle	[ 0.1, 1.2, 1.57 ]
+	skyColor	[ 0.76238 0.8 0.1427,
+			  0.277798 0.219779 0.7,
+			  0.222549 0.390234 0.7,
+			  0.60094 0.662637 0.69 ]
+}
+DEF Base_Tras Transform {
+	translation	0 0 0
+	children DEF Base_Rot Transform {
+		children [ 
+		    Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0 0 1
+				    }
+
+			    }
+
+			    geometry	Sphere {
+				    radius	0.2
+			    }
+
+		    }
+
+		    DEF Link_1 Transform {
+			    translation	0 1 0
+			    children [ 
+				Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						radius	0.1
+					}
+
+				}
+
+				DEF Q2_Q3_pi Transform {
+					translation	0 1 0
+					children [ 
+					    Shape {
+						    appearance	Appearance {
+							    material	Material {
+								    diffuseColor	0 1 0
+							    }
+
+						    }
+
+						    geometry	Sphere {
+							    radius	0.2
+						    }
+
+					    }
+
+					    DEF Q2_RH_Pi Transform {
+						    rotation	0 0 1  0.785398
+						    children DEF Q4 Transform {
+							    children DEF Link_RH_Q2 Transform {
+								    translation	0 1 0
+								    center	0 -1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Cylinder {
+											radius	0.1
+										}
+
+									}
+
+									DEF EE_RH Transform {
+										translation	0 1 0
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+												    }
+
+											    }
+
+											    geometry	Sphere {
+												    radius	0.2
+											    }
+
+										    }
+
+										    DEF EE_Sigma_RH Transform {
+											    rotation	0 0 -1  0.785398
+											    children [ 
+												DEF Y_Axis Transform {
+													translation	0 0.5 0
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+																diffuseColor	0 0 1
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	1
+															radius	0.05
+														}
+
+													}
+												}
+
+												DEF X_Axis Transform {
+													translation	0.5 0 0
+													rotation	0 0 1  1.5708
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+																diffuseColor	1 0 0
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	1
+															radius	0.05
+														}
+
+													}
+												}
+											    ]
+										    }
+										]
+									}
+
+									DEF RH_VP Viewpoint {
+										orientation	0 0 -1  0.785398
+										position	0 1 2
+									}
+								    ]
+							    }
+						    }
+					    }
+
+					    DEF Q3_LH_Pi Transform {
+						    rotation	0 0 -1  0.785398
+						    children DEF Q5 Transform {
+							    children DEF Link_LH Transform {
+								    translation	0 1 0
+								    children [ 
+									Shape {
+										appearance	Appearance {
+											material	Material {
+											}
+
+										}
+
+										geometry	Cylinder {
+											radius	0.1
+										}
+
+									}
+
+									DEF EE_LH Transform {
+										translation	0 1 0
+										children [ 
+										    Shape {
+											    appearance	Appearance {
+												    material	Material {
+												    }
+
+											    }
+
+											    geometry	Sphere {
+												    radius	0.2
+											    }
+
+										    }
+
+										    DEF EE_Sigma_RH Transform {
+											    rotation	0 0 1  0.785398
+											    children [ 
+												DEF Y_Axis Transform {
+													translation	0 0.5 0
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+																diffuseColor	0 0 1
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	1
+															radius	0.05
+														}
+
+													}
+												}
+
+												DEF X_Axis Transform {
+													translation	0.5 0 0
+													rotation	0 0 1  1.5708
+													children Shape {
+														appearance	Appearance {
+															material	Material {
+																diffuseColor	1 0 0
+															}
+
+														}
+
+														geometry	Cylinder {
+															height	1
+															radius	0.05
+														}
+
+													}
+												}
+											    ]
+										    }
+
+										    DEF LH_VP Viewpoint {
+											    orientation	0 0 1  0.785398
+											    position	0 0 2
+										    }
+										]
+									}
+								    ]
+							    }
+						    }
+					    }
+					]
+				}
+			    ]
+		    }
+
+		    DEF Frontal_Follow_Base Viewpoint {
+			    position	0 2 6
+		    }
+
+		    DEF Lateral_Follow_Base Viewpoint {
+			    orientation	0 1 0  1.5708
+			    position	8 2 0
+		    }
+		]
+	}
+}
+DEF Obj_RH Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	0.2
+		    }
+
+	    }
+
+	    DEF Rot_Obj_RH Transform {
+		    children DEF EE_Sigma_Obj_RH Transform {
+			    children [ 
+				DEF Y_Axis Transform {
+					translation	0 0.5 0
+					children Shape {
+						appearance	Appearance {
+							material	Material {
+								diffuseColor	0 0 1
+							}
+
+						}
+
+						geometry	Cylinder {
+							height	1
+							radius	0.05
+						}
+
+					}
+				}
+
+				DEF X_Axis Transform {
+					translation	0.5 0 0
+					rotation	0 0 1  1.5708
+					children Shape {
+						appearance	Appearance {
+							material	Material {
+								diffuseColor	1 0 0
+							}
+
+						}
+
+						geometry	Cylinder {
+							height	1
+							radius	0.05
+						}
+
+					}
+				}
+			    ]
+		    }
+	    }
+	]
+}
+DEF Obj_LH Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	0.2
+		    }
+
+	    }
+
+	    DEF Rot_Obj_LH Transform {
+		    children DEF EE_Sigma_Obj_LH Transform {
+			    children [ 
+				DEF Y_Axis Transform {
+					translation	0 0.5 0
+					children Shape {
+						appearance	Appearance {
+							material	Material {
+								diffuseColor	0 0 1
+							}
+
+						}
+
+						geometry	Cylinder {
+							height	1
+							radius	0.05
+						}
+
+					}
+				}
+
+				DEF X_Axis Transform {
+					translation	0.5 0 0
+					rotation	0 0 1  1.5708
+					children Shape {
+						appearance	Appearance {
+							material	Material {
+								diffuseColor	1 0 0
+							}
+
+						}
+
+						geometry	Cylinder {
+							height	1
+							radius	0.05
+						}
+
+					}
+				}
+			    ]
+		    }
+	    }
+	]
+}
+DEF Obj_CM Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	0.2
+		    }
+
+	    }
+
+	    DEF EE_Sigma_Obj_CM Transform {
+		    children [ 
+			DEF Y_Axis Transform {
+				translation	0 0.5 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	1
+						radius	0.05
+					}
+
+				}
+			}
+
+			DEF X_Axis Transform {
+				translation	0.5 0 0
+				rotation	0 0 1  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	1 0 0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	1
+						radius	0.05
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF Actual_CM Transform {
+	translation	0 0 0
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0 0 1
+			    }
+
+		    }
+
+		    geometry	Sphere {
+			    radius	0.2
+		    }
+
+	    }
+
+	    DEF CM_Actual Transform {
+		    children [ 
+			DEF Y_Axis Transform {
+				translation	0 0.5 0
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	0 0 1
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	1
+						radius	0.05
+					}
+
+				}
+			}
+
+			DEF X_Axis Transform {
+				translation	0.5 0 0
+				rotation	0 0 1  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							diffuseColor	1 0 0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	1
+						radius	0.05
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF CM_Follow Viewpoint {
+		    position	0 0 2
+	    }
+	]
+}
